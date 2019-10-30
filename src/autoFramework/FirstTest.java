@@ -41,10 +41,6 @@ public class FirstTest extends BaseClass {
 	 */
 	@Test(groups = { "hasFollowUp", "hasStartUp" }, enabled = true)
 	private void clickNew() throws InterruptedException {
-
-//		WebElement dummy;
-//		dummy = driver.findElement(By.xpath("//a[@href='https://www.thegrommet.com/recent-discoveries']"));			
-
 		assertTrue(giftsForHim.isDisplayed());
 		assertTrue(giftsForGirls.isDisplayed());
 		assertTrue(giftsForBoys.isDisplayed());
@@ -72,7 +68,7 @@ public class FirstTest extends BaseClass {
 	 * email sign-in
 	 * 
 	 * @throws InterruptedException
-	 * @throws InvalidValue 
+	 * @throws InvalidValue
 	 */
 	@Test(dependsOnMethods = "clickNew", groups = { "noStartUp", "noFollowUp" }, enabled = true)
 	private void checkConfirmation() throws InterruptedException, InvalidValue {
@@ -92,8 +88,7 @@ public class FirstTest extends BaseClass {
 			href = googleReview.getAttribute("href");
 			driver.switchTo().defaultContent();
 		} catch (WebDriverException e) {
-			driver.switchTo().defaultContent();
-			Thread.sleep(1000);
+			driver.switchTo().defaultContent();	
 			googleReview = driver.findElement(By.cssSelector(".gvncyc"));
 			href = googleReview.getAttribute("href");
 			sassert.assertTrue(driver.findElement(By.cssSelector(".gvncyc")).isDisplayed(),

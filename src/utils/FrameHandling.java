@@ -11,9 +11,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 
-
+/**
+ * Provides methods for moving between frames and windows by index, id or other means - all methods need the current driver as input
+ * @author Lucian
+ *
+ */
 public class FrameHandling {	
-
+	/**
+	 * 
+	 * @param driver
+	 * @param frameIndex
+	 * @throws InterruptedException
+	 */
+	//TODO: Add window handling methods
 	static public void switchToFrame(WebDriver driver,int frameIndex) throws InterruptedException {			
 		Thread.sleep(5000);
 		List<WebElement> frameList = driver.findElements(By.tagName("iframe"));
@@ -37,6 +47,13 @@ public class FrameHandling {
 			assertEquals(driver.findElement(By.cssSelector(".gvncyc")).getAttribute("href"),
 				"https://www.google.com/shopping/ratings/account/metrics?q=thegrommet.com&c=US&v=4&hl=en_US");
 	}
+	/**
+	 * 
+	 * @param driver
+	 * @param expectedText
+	 * @throws InterruptedException
+	 * @throws InvalidValue
+	 */
 	static public void switchToFrame(WebDriver driver,String expectedText) throws InterruptedException, InvalidValue {			
 		Thread.sleep(5000);
 		List<WebElement> frameList = driver.findElements(By.tagName("iframe"));
@@ -51,9 +68,6 @@ public class FrameHandling {
 		else
 			throw new InvalidValue(expectedText);
 		try {
-//			JavascriptExecutor jsExecutor = (JavascriptExecutor)driver;
-//			String currentFrame = (String) jsExecutor.executeScript("return self.name");
-
 			assertTrue(driver.findElement(By.cssSelector(".gvncyc")).isDisplayed(),
 					"Google metrics element was not found.");
 		} catch (WebDriverException e) {			

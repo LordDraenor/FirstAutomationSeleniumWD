@@ -22,5 +22,22 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/activation-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/groovy-2.5.8.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/groovy-json-2.5.8.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/groovy-xml-2.5.8.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/hamcrest-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/httpmime-4.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/javax.activation-api-1.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/jaxb-api-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/jaxb-osgi-2.3.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/org.apache.sling.javax.activation-0.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Work/rest-assured-4.1.2-dist/rest-assured-4.1.2-deps/tagsoup-1.2.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
