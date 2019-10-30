@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Demo Suite">
+	<test name="For The Grommet" verbose="2">
+		<classes>
+			<class name="autoFramework.FirstTest" />
+		</classes>
+	</test>
+</suite>
