@@ -117,7 +117,7 @@ public class FirstTest extends BaseClass {
 		try {
 			sassert.assertTrue(driver.findElement(By.xpath("//h1[contains(.,'Thank you for signing up!')]")).getText()
 					.contains("Thank you for signing up!"), "You are not welcome");
-		} catch (NoSuchElementException e) {
+		} catch (org.openqa.selenium.NoSuchElementException | NoSuchElementException e) {
 			sassert.fail("The confirmation message was not displayed");
 		}
 		sassert.assertAll();
