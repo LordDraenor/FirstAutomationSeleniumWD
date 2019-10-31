@@ -9,6 +9,7 @@
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.0</version>
 				<configuration>
@@ -41,11 +42,10 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.10</version>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-firefox-driver</artifactId>
+			<artifactId>selenium-java</artifactId>
 			<version>3.141.59</version>
 		</dependency>
 		<dependency>
@@ -62,12 +62,6 @@
 			<groupId>org.openqa.selenium.server</groupId>
 			<artifactId>selenium-server</artifactId>
 			<version>1.0-20081010.060147</version>
-		</dependency>
-		<dependency>
-			<groupId>org.openqa.selenium</groupId>
-			<artifactId>selenium</artifactId>
-			<version>0.8.1</version>
-			<type>pom</type>
 		</dependency>
 	</dependencies>
 </project>
