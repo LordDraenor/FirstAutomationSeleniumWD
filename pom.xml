@@ -6,7 +6,6 @@
 	<artifactId>FirstAutomationSeleniumWD</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
-		<defaultGoal>Test</defaultGoal>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
@@ -63,6 +62,12 @@
 			<groupId>org.openqa.selenium.server</groupId>
 			<artifactId>selenium-server</artifactId>
 			<version>1.0-20081010.060147</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openqa.selenium</groupId>
+			<artifactId>selenium</artifactId>
+			<version>0.8.1</version>
+			<type>pom</type>
 		</dependency>
 	</dependencies>
 </project>
