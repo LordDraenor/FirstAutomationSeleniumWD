@@ -5,7 +5,6 @@ import static org.testng.Assert.assertTrue;
 
 import java.util.NoSuchElementException;
 
-
 import org.omg.CORBA.DynAnyPackage.InvalidValue;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -87,7 +86,7 @@ public class FirstTest extends BaseClass {
 			href = googleReview.getAttribute("href");
 			driver.switchTo().defaultContent();
 		} catch (WebDriverException e) {
-			driver.switchTo().defaultContent();	
+			driver.switchTo().defaultContent();
 			googleReview = driver.findElement(By.cssSelector(".gvncyc"));
 			href = googleReview.getAttribute("href");
 			sassert.assertTrue(driver.findElement(By.cssSelector(".gvncyc")).isDisplayed(),
@@ -101,18 +100,24 @@ public class FirstTest extends BaseClass {
 		driver.switchTo().defaultContent();
 		sassert.assertTrue(driver.findElement(By.xpath("/html/body/footer/div/div[5]")).isDisplayed(),
 				"Company trademark and address were not found.");
-		sassert.assertEquals(driver.findElement(By.xpath("/html/body/footer/div/div[5]")).getText(),
-				"The Grommet: The Birthplace of Citizen Commerce® | 87 Elmwood Street, Somerville, MA 02144",
+		sassert.assertTrue(
+				driver.findElement(By.xpath("/html/body/footer/div/div[5]")).getText().contains("The Grommet:")
+						&& driver.findElement(By.xpath("/html/body/footer/div/div[5]")).getText()
+								.contains("The Birthplace of Citizen Commerce®")
+						&& driver.findElement(By.xpath("/html/body/footer/div/div[5]")).getText()
+								.contains("87 Elmwood Street, Somerville, MA 02144"),
 				"Company trademark and address texts were not as expected.");
 		sassert.assertTrue(driver.findElement(By.xpath("/html/body/footer/div/div[6]")).isDisplayed(),
 				"Copyright text was not found.");
 		sassert.assertEquals(driver.findElement(By.xpath("/html/body/footer/div/div[6]")).getText(),
-				"The Grommet: The Birthplace of Citizen Commerce® | 87 Elmwood Street, Somerville, MA 02144",
+				"Copyright © 2012 - 2019. All rights reserved. For U.S. Residents Only",
 				"Copyright text was not as expected.");
 		sassert.assertTrue(driver.findElement(By.xpath("/html/body/footer/div/div[7]")).isDisplayed(),
 				"Privacy and terms of use text was not found");
-		sassert.assertEquals(driver.findElement(By.xpath("/html/body/footer/div/div[7]")).getText(),
-				"Privacy Policy | Terms of Use", "Privacy and terms of use text was not as expected.");
+		sassert.assertTrue(driver.findElement(By.xpath("/html/body/footer/div/div[7]")).getText()
+				.contains("Privacy Policy")
+				&& driver.findElement(By.xpath("/html/body/footer/div/div[7]")).getText().contains("Terms of Use"),
+				"Privacy and terms of use text was not as expected.");
 
 		try {
 			sassert.assertTrue(driver.findElement(By.xpath("//h1[contains(.,'Thank you for signing up!')]")).getText()

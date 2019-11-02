@@ -18,7 +18,7 @@ import org.openqa.selenium.WebElement;
  */
 public class FrameHandling {	
 	/**
-	 * 
+	 * Switch to a frame by index
 	 * @param driver
 	 * @param frameIndex
 	 * @throws InterruptedException
@@ -48,7 +48,7 @@ public class FrameHandling {
 				"https://www.google.com/shopping/ratings/account/metrics?q=thegrommet.com&c=US&v=4&hl=en_US");
 	}
 	/**
-	 * 
+	 * Switch to a frame by expected partial frame name.
 	 * @param driver
 	 * @param expectedText
 	 * @throws InterruptedException

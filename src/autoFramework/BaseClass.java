@@ -18,10 +18,10 @@ public class BaseClass {
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 	/**
-	 * 
+	 * Before method for groups that require a new browser start up
 	 */
 	@BeforeGroups(groups = "hasStartUp")
-	public void beforeMeth() {
+	public void beforeGrp() {
 
 		FirefoxProfile profile = new FirefoxProfile();
 		FirefoxOptions options = new FirefoxOptions();
@@ -43,7 +43,7 @@ public class BaseClass {
 
 	
 	/**
-	 * 
+	 * After method for groups that want the browser closed at test end
 	 */
 	@AfterGroups(groups = "noFollowUp")
 	public void afterGrp() {
@@ -62,7 +62,7 @@ public class BaseClass {
 		element.click();
 	}
 	/**
-	 * Just wait a bit for the element to be visible
+	 * Wait a bit for the element to be visible
 	 * @param element
 	 * @param minDuration
 	 */
