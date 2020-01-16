@@ -1,6 +1,6 @@
 package autoFramework;
 
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Headers;
@@ -11,8 +11,8 @@ import io.restassured.specification.RequestSpecification;
 
 public class TestAPI {
 
-	@Test
-	public void GetDummyApiDetails() {
+	//@Test
+	public static void main(String[] args) {
 		RestAssured.baseURI = "http://restapi.demoqa.com/utilities/weather/city/";
 
 		RequestSpecification httpRequest = RestAssured.given();

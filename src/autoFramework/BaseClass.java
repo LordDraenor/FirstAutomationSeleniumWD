@@ -28,6 +28,7 @@ public class BaseClass {
 		options.setProfile(profile);
 		profile.setPreference("browser.startup.homepage", "https://www.thegrommet.com/");
 		profile.setPreference("dom.webnotifications.enable", "false");
+		profile.setPreference("privacy.socialtracking.block_cookies.enabled", "false");		
 		profile.setPreference("privacy.socialtracking.notification.enabled", "false");
 		profile.setPreference("privacy.socialtracking.notification.max", "0");
 		profile.setPreference("privacy.trackingprotection.socialtracking.enabled", "false");	
